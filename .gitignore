@@ -1,0 +1,9 @@
+.vscode/
+node_modules
+.DS_Store
+.node-versions
+
+# ビルド成果物（自動生成されるファイル）
+css/
+images/
+dist/

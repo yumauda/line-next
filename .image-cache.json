@@ -1,0 +1,76 @@
+{
+  "files": {
+    "common/test_image3.png": {
+      "hash": "da4eee77654c29a4fe3d326610cbd4efda7297c9",
+      "size": 1065,
+      "mtimeMs": 1771402038546.8245,
+      "webp": true
+    },
+    "common/kyusei.jpg": {
+      "hash": "a52954df8526abfee01377758a684b4a3e76e0d5",
+      "size": 52688,
+      "mtimeMs": 1771402700701.8213,
+      "webp": true
+    },
+    "common/trouble-man.png": {
+      "hash": "e030bc66b0e59d1cb92c03090378e34fdc080d2f",
+      "size": 155926,
+      "mtimeMs": 1771403290627.261,
+      "webp": true
+    },
+    "common/trouble-icon-07.svg": {
+      "hash": "b789b430307f4f68b5fad31e95f62159d27ccfad",
+      "size": 302,
+      "mtimeMs": 1771403211242.603,
+      "webp": false
+    },
+    "common/trouble-icon-06.svg": {
+      "hash": "b789b430307f4f68b5fad31e95f62159d27ccfad",
+      "size": 302,
+      "mtimeMs": 1771403211255.5625,
+      "webp": false
+    },
+    "common/trouble-icon-05.svg": {
+      "hash": "869e28d3207abf60b24887846db1e3101fd93d02",
+      "size": 302,
+      "mtimeMs": 1771403211255.5889,
+      "webp": false
+    },
+    "common/trouble-icon-04.svg": {
+      "hash": "869e28d3207abf60b24887846db1e3101fd93d02",
+      "size": 302,
+      "mtimeMs": 1771403211238.436,
+      "webp": false
+    },
+    "common/trouble-icon-03.svg": {
+      "hash": "869e28d3207abf60b24887846db1e3101fd93d02",
+      "size": 302,
+      "mtimeMs": 1771403211247.7844,
+      "webp": false
+    },
+    "common/trouble-icon-02.svg": {
+      "hash": "869e28d3207abf60b24887846db1e3101fd93d02",
+      "size": 302,
+      "mtimeMs": 1771403211254.1453,
+      "webp": false
+    },
+    "common/trouble-icon-01.svg": {
+      "hash": "869e28d3207abf60b24887846db1e3101fd93d02",
+      "size": 302,
+      "mtimeMs": 1771403211239.4346,
+      "webp": false
+    },
+    "common/consult-guide.png": {
+      "hash": "3742340b362703f2b84019edc076e0d7745b78f7",
+      "size": 120266,
+      "mtimeMs": 1771403509595.5278,
+      "webp": true
+    },
+    "common/consult-worry-56586a.png": {
+      "hash": "047ddede4a27d3a22a84e66dc6344235cda1ae96",
+      "size": 50846,
+      "mtimeMs": 1771403612120.759,
+      "webp": true
+    }
+  }
+}

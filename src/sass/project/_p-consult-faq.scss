@@ -1,0 +1,85 @@
+@use "../global" as *;
+
+.p-consult-faq {
+  background-color: #faf3df;
+  padding-top: rem(48);
+  padding-bottom: rem(70);
+}
+
+.p-consult-faq__title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 900;
+  font-size: rem(26);
+  line-height: 1.5;
+  color: #1a1919;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: rem(22);
+  @include mq("md") {
+    font-size: rem(36);
+    margin-bottom: rem(30);
+  }
+}
+
+.p-consult-faq__card {
+  background-color: $white;
+  border-radius: rem(2);
+  box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.3);
+  padding: rem(10);
+  max-width: rem(680);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: rem(18);
+  @include mq("md") {
+    margin-bottom: rem(26);
+  }
+}
+
+.p-consult-faq__card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 660 / 440;
+  object-fit: cover;
+}
+
+.p-consult-faq__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: rem(680);
+}
+
+.p-consult-faq__item {
+  position: relative;
+  padding-top: rem(10);
+  padding-bottom: rem(10);
+  padding-left: rem(32);
+  border-bottom: rem(1) dotted #666666;
+  font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: 1.6;
+  letter-spacing: 0.047em;
+  color: #1a1919;
+  @include mq("md") {
+    font-size: rem(21);
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+  }
+}
+
+.p-consult-faq__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: rem(18);
+  width: rem(21);
+  height: rem(21);
+  border-radius: 50%;
+  background-color: #00bb99;
+}
+
+.p-consult-faq__item:last-child {
+  border-bottom: none;
+}
