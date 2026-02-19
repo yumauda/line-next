@@ -7,8 +7,11 @@
 @use "./layout/_test";
 
 // Project
+@use "./project/_p-consult-detail";
 @use "./project/_p-consult-faq";
 @use "./project/_p-consult";
+@use "./project/_p-flow";
+@use "./project/_p-footer";
 @use "./project/_p-header";
 @use "./project/_p-mv";
 @use "./project/_p-site";

@@ -71,6 +71,24 @@
       "size": 50846,
       "mtimeMs": 1771403612120.759,
       "webp": true
+    },
+    "common/consult-point-56586a.png": {
+      "hash": "47d911240b3071b20e03fb0da74ddc12661dad50",
+      "size": 29820,
+      "mtimeMs": 1771484189018.784,
+      "webp": true
+    },
+    "common/reserve-flow-02-7da343.png": {
+      "hash": "09abdf3199e1510abd32c0d24c5b1d2d55fad69f",
+      "size": 94214,
+      "mtimeMs": 1771485260425.5857,
+      "webp": true
+    },
+    "common/reserve-flow-01.png": {
+      "hash": "151d6f6d31094d78fd94b9f9cf21cce098d03e35",
+      "size": 58632,
+      "mtimeMs": 1771485260134.2322,
+      "webp": true
     }
   }
 }
