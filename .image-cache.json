@@ -89,6 +89,36 @@
       "size": 58632,
       "mtimeMs": 1771485260134.2322,
       "webp": true
+    },
+    "common/mv_text.png": {
+      "hash": "f98246781c6e7b86164526a31db2acaeedac243f",
+      "size": 88798,
+      "mtimeMs": 1771570909849.9114,
+      "webp": true
+    },
+    "common/mv_img.png": {
+      "hash": "dde5e5a185171a4537a155fe29532adb5a598d17",
+      "size": 338268,
+      "mtimeMs": 1771570920622.354,
+      "webp": true
+    },
+    "common/mv_arow.png": {
+      "hash": "5f8104f3829f8e5aa32d0b4465ea6b89632df9f9",
+      "size": 889,
+      "mtimeMs": 1771571031021.8845,
+      "webp": true
+    },
+    "common/mv_arrow.png": {
+      "hash": "5f8104f3829f8e5aa32d0b4465ea6b89632df9f9",
+      "size": 889,
+      "mtimeMs": 1771571031021.8845,
+      "webp": true
+    },
+    "common/mv_box_img.png": {
+      "hash": "d4e8de6fec5759c714837f365b6c159dae2352e0",
+      "size": 87045,
+      "mtimeMs": 1771572833613.8782,
+      "webp": true
     }
   }
 }

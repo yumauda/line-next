@@ -1,12 +1,111 @@
 @use "../global" as *;
 
 .p-header {
-  background-color: #000;
-  position: fixed;
-  top: 0;
-  left: 0;
+  background: linear-gradient(0deg, #015eea 0%, #018bf1 74%, #00c0fa 100%);
+  color: $white;
+  padding-top: rem(20);
+  padding-bottom: rem(22);
+}
+
+.p-header__inner {
+  max-width: rem(1320);
   width: 100%;
-  height: rem(50);
-  z-index: 100;
-  right: 0;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq("md") {
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.p-header__heading {
+  background-color: $white;
+  border-radius: 999px;
+  height: rem(36);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.p-header__heading-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(12);
+}
+
+.p-header__heading-icon {
+  width: rem(40);
+  position: absolute;
+  left: rem(-10);
+  height: rem(40);
+  border-radius: rem(20);
+  background-color: #ff246d;
+  box-shadow: rem(1) rem(1) rem(2) rgba(0, 0, 0, 0.29);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  flex: 0 0 auto;
+}
+
+.p-header__heading-icon svg {
+  display: block;
+  width: rem(20);
+  height: rem(20);
+}
+
+.p-header__heading-text {
+  color: #ff246d;
+  font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: 1.5;
+  text-align: center;
+
+  @include mq("md") {
+    font-size: rem(19);
+  }
+}
+
+.p-header__body {
+  text-align: center;
+  margin-top: rem(16);
+}
+
+.p-header__text {
+  margin: 0;
+  font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-weight: 500;
+  font-size: rem(14);
+  line-height: 1.4;
+  letter-spacing: 0.056em;
+  color: $white;
+
+  @include mq("md") {
+    font-size: rem(18);
+    line-height: 1.2;
+  }
+}
+
+.p-header__text+.p-header__text {
+  margin-top: rem(10);
+}
+
+.p-header__highlight {
+  margin: rem(12) 0 0;
+  font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: 1.2;
+  letter-spacing: 0.042em;
+  color: #e5f736;
+
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: 0.88;
+  }
 }
