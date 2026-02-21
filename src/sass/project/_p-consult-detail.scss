@@ -15,7 +15,7 @@
   text-align: center;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 900;
-  font-size: rem(28);
+  font-size: rem(24);
   line-height: 1.33;
   color: #00bb99;
 
@@ -128,7 +128,11 @@
   max-width: rem(768);
   margin-left: auto;
   margin-right: auto;
-  margin-top: rem(72);
+  margin-top: rem(24);
+  @include mq(md){
+    margin-top: rem(72);
+    
+  }
 }
 
 .p-consult-detail__point img {
@@ -210,26 +214,30 @@
 .p-consult-detail__table th,
 .p-consult-detail__table td {
   border-bottom: rem(1) solid #eeeeee;
-  padding: rem(14) rem(14);
   vertical-align: top;
   font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-  font-size: rem(14);
+  font-size: rem(13);
   line-height: 1.6;
   letter-spacing: 0.063em;
   color: #1a1919;
-
+  padding: rem(8);
   @include mq("md") {
+    padding: rem(14) rem(14);
     font-size: rem(16);
   }
 }
 
 .p-consult-detail__table th {
-  width: rem(180);
   background-color: #00bb99;
   color: $white;
   font-weight: 700;
   text-align: center;
   border-bottom-color: $white;
+  width: rem(120);
+  @include mq(md){
+    width: rem(180);
+    
+  }
 }
 
 .p-consult-detail__table td {

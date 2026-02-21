@@ -15,7 +15,7 @@
 .p-consult-faq__title {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 900;
-  font-size: rem(26);
+  font-size: rem(24);
   line-height: 1.5;
   color: #1a1919;
   text-align: center;
@@ -33,7 +33,11 @@
   max-width: rem(680);
   margin-right: auto;
   margin-left: auto;
-  margin-top: rem(56);
+  margin-top: rem(24);
+  @include mq(md){
+    margin-top: rem(56);
+    
+  }
 }
 
 .p-consult-faq__card img {
@@ -48,17 +52,21 @@
   max-width: rem(680);
   margin-left: auto;
   margin-right: auto;
-  margin-top: rem(32);
+  margin-top: rem(24);
+  @include mq(md){
+    margin-top: rem(32);
+    
+  }
 }
 
 .p-consult-faq__item {
   position: relative;
   padding-top: rem(10);
   padding-bottom: rem(10);
-  padding-left: rem(32);
-
-
+  padding-left: rem(24);
+  
   @include mq("md") {
+    padding-left: rem(32);
     padding-top: rem(12);
     padding-bottom: rem(12);
   }
@@ -87,13 +95,19 @@
   content: "";
   position: absolute;
   left: 0;
-  top: rem(18);
-  width: rem(21);
-  height: rem(21);
   background-image: url(../images/common/faq_circle.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  width: rem(16);
+  height: rem(16);
+  top: rem(16);
+  @include mq(md){
+    top: rem(18);
+    width: rem(21);
+    height: rem(21);
+    
+  }
 }
 
 .p-consult-faq__item:last-child {

@@ -2,16 +2,19 @@
 
 .p-flow {
   background-color: #edf4f2;
-  padding-top: rem(54);
+  padding-top: rem(40);
+
+  @include mq(md) {
+    padding-top: rem(100);
+
+  }
 }
 
 .p-flow__title {
-  margin-top: 0;
-  margin-bottom: rem(12);
   text-align: center;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 900;
-  font-size: rem(26);
+  font-size: rem(24);
   line-height: 1.4;
   color: #117766;
 
@@ -27,20 +30,24 @@
   background-color: #117766;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: rem(16);
+  margin-top: rem(16);
+  @include mq(md){
+    margin-top: rem(36);
+    
+  }
 }
 
 .p-flow__lead {
-  margin: 0 auto rem(26);
   text-align: center;
   font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-weight: 500;
-  font-size: rem(16);
+  font-size: rem(14);
   line-height: 1.8;
   letter-spacing: 0.055em;
   color: #1a1919;
-
+  margin-top: rem(20);
   @include mq("md") {
+    margin-top: rem(36);
     font-size: rem(18);
   }
 }
@@ -48,9 +55,11 @@
 .p-flow__list {
   display: grid;
   gap: rem(32);
+  margin-top: rem(24);
 
   @include mq(md) {
     gap: rem(72);
+    margin-top: rem(32);
 
   }
 }
@@ -79,10 +88,9 @@
 }
 
 .p-flow__item-title {
-  margin: 0;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 900;
-  font-size: rem(20);
+  font-size: rem(18);
   line-height: 1.5;
   color: #117766;
 
@@ -139,15 +147,17 @@
 .p-flow__desc {
   display: grid;
   gap: rem(12);
-  margin-top: rem(8);
+  margin-top: rem(20);
+  @include mq(md){
+    margin-top: rem(32);
+  }
 }
 
 .p-flow__text {
-  margin: 0;
   text-align: center;
   font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-weight: 500;
-  font-size: rem(16);
+  font-size: rem(14);
   line-height: 1.8;
   letter-spacing: 0.055em;
   color: #1a1919;
@@ -156,20 +166,33 @@
     font-size: rem(18);
   }
 }
-
+.p-flow__text + .p-flow__text {
+  margin-top: rem(16);
+  @include mq(md){
+    margin-top: rem(36);
+  }
+}
 .p-flow__tel {
-  margin: rem(34) 0 0;
   text-align: center;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
-  font-size: rem(28);
+  font-size: rem(24);
   line-height: 1.4;
   color: #000000;
-  padding-bottom: rem(44);
+  margin-top: rem(20);
 
   @include mq("md") {
+    margin-top: rem(32);
     font-size: rem(40);
-    padding-bottom: rem(56);
+  }
+}
+
+.p-flow__tel span {
+  font-size: rem(14);
+
+  @include mq(md) {
+    font-size: rem(24);
+
   }
 }
 

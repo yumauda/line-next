@@ -23,11 +23,17 @@
 
 .p-header__heading {
   background-color: $white;
-  border-radius: 999px;
-  height: rem(36);
+  border-radius: 9999px;
   display: flex;
   justify-content: center;
   position: relative;
+  height: rem(48);
+
+  @include mq(md) {
+
+    height: rem(36);
+  }
+
 }
 
 .p-header__heading-inner {
@@ -62,7 +68,7 @@
   color: #ff246d;
   font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-weight: 700;
-  font-size: rem(16);
+  font-size: rem(14);
   line-height: 1.5;
   text-align: center;
 
@@ -79,7 +85,7 @@
 .p-header__text {
   font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-weight: 500;
-  font-size: rem(14);
+  font-size: rem(12);
   line-height: 1.4;
   letter-spacing: 0.056em;
   color: $white;

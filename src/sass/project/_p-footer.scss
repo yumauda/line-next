@@ -6,12 +6,18 @@
 }
 
 .p-footer__inner {
-  min-height: rem(204);
   display: grid;
   place-content: center;
   gap: rem(8);
-  padding-top: rem(40);
-  padding-bottom: rem(40);
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+  
+  @include mq(md){
+    min-height: rem(204);
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    
+  }
 }
 
 .p-footer__nav {
@@ -29,7 +35,7 @@
 
 .p-footer__link {
   color: $white;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .p-footer__link:hover {
