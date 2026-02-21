@@ -82,7 +82,6 @@
 }
 
 .p-consult__text {
-  margin: 0;
   font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-weight: 500;
   font-size: rem(16);
@@ -93,6 +92,15 @@
   @include mq("md") {
     font-size: rem(18);
   }
+}
+
+.p-consult__text--orange {
+  color: #ee5a24;
+  font-weight: 700;
+}
+
+.p-consult__text--bold {
+  font-weight: 700;
 }
 
 .p-consult__figure {

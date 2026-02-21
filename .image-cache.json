@@ -119,6 +119,18 @@
       "size": 87045,
       "mtimeMs": 1771572833613.8782,
       "webp": true
+    },
+    "common/trouble-arrow.png": {
+      "hash": "e3cc7dbd726e05450ecd90370188e73e635c1742",
+      "size": 1403,
+      "mtimeMs": 1771634506464.7622,
+      "webp": true
+    },
+    "common/faq_circle.png": {
+      "hash": "25c89aef3d2f95975afaa20f35c94fafcd4c1ecc",
+      "size": 1260,
+      "mtimeMs": 1771634978585.3855,
+      "webp": true
     }
   }
 }

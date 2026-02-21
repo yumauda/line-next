@@ -2,8 +2,14 @@
 
 .p-consult-faq {
   background-color: #faf3df;
-  padding-top: rem(48);
-  padding-bottom: rem(70);
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+
+  @include mq(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+
+  }
 }
 
 .p-consult-faq__title {
@@ -13,11 +19,9 @@
   line-height: 1.5;
   color: #1a1919;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: rem(22);
+
   @include mq("md") {
     font-size: rem(36);
-    margin-bottom: rem(30);
   }
 }
 
@@ -29,10 +33,7 @@
   max-width: rem(680);
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: rem(18);
-  @include mq("md") {
-    margin-bottom: rem(26);
-  }
+  margin-top: rem(56);
 }
 
 .p-consult-faq__card img {
@@ -44,10 +45,10 @@
 }
 
 .p-consult-faq__list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
   max-width: rem(680);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(32);
 }
 
 .p-consult-faq__item {
@@ -55,6 +56,15 @@
   padding-top: rem(10);
   padding-bottom: rem(10);
   padding-left: rem(32);
+
+
+  @include mq("md") {
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+  }
+}
+
+.p-consult-faq__item-text {
   border-bottom: rem(1) dotted #666666;
   font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-weight: 700;
@@ -62,11 +72,15 @@
   line-height: 1.6;
   letter-spacing: 0.047em;
   color: #1a1919;
-  @include mq("md") {
+
+  @include mq(md) {
     font-size: rem(21);
-    padding-top: rem(12);
-    padding-bottom: rem(12);
+
   }
+}
+
+.p-consult-faq__item-text span {
+  color: #ee5a24;
 }
 
 .p-consult-faq__item::before {
@@ -76,8 +90,10 @@
   top: rem(18);
   width: rem(21);
   height: rem(21);
-  border-radius: 50%;
-  background-color: #00bb99;
+  background-image: url(../images/common/faq_circle.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .p-consult-faq__item:last-child {

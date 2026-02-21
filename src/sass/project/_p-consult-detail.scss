@@ -1,13 +1,17 @@
 @use "../global" as *;
 
 .p-consult-detail {
-  padding-top: rem(54);
-  padding-bottom: rem(72);
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+
+  @include mq(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+
+  }
 }
 
 .p-consult-detail__title {
-  margin-top: 0;
-  margin-bottom: rem(28);
   text-align: center;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 900;
@@ -17,18 +21,17 @@
 
   @include mq("md") {
     font-size: rem(48);
-    margin-bottom: rem(36);
   }
 }
 
 .p-consult-detail__voices {
-  margin-bottom: rem(30);
+  margin-top: rem(32);
 
   @include mq("md") {
     max-width: rem(768);
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: rem(40);
+    margin-top: rem(64);
   }
 }
 
@@ -105,7 +108,6 @@
 }
 
 .p-consult-detail__text {
-  margin: 0;
   font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   font-weight: 500;
   font-size: rem(16);
@@ -117,11 +119,16 @@
     font-size: rem(18);
   }
 }
-
+.p-consult-detail__text span {
+  color: #ee5a24;
+  font-weight: 700;
+}
 .p-consult-detail__point {
   position: relative;
-  margin: 0 auto rem(30);
   max-width: rem(768);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(72);
 }
 
 .p-consult-detail__point img {
@@ -139,9 +146,11 @@
   font-size: rem(18);
   line-height: 1.5;
   color: #00bb99;
+  margin-top: rem(24);
 
   @include mq("md") {
     font-size: rem(28);
+    margin-top: rem(32);
   }
 }
 
