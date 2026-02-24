@@ -26,8 +26,7 @@
   color: #00bb99;
   font-size: rem(24);
   line-height: 1.33;
-  margin-top: 0;
-  margin-bottom: rem(12);
+  margin-bottom: rem(0);
 
   @include mq("md") {
     font-size: rem(48);
@@ -43,6 +42,7 @@
   margin-right: auto;
   margin-left: auto;
   margin-bottom: rem(28);
+  transition: 0.3s ease-in-out;
 }
 
 .p-trouble__lead {
@@ -68,7 +68,7 @@
 
   @include mq("md") {
     grid-template-columns: rem(305) 1fr;
-    gap: rem(40);
+    gap: rem(24);
     align-items: center;
     max-width: rem(906);
   }
@@ -101,19 +101,15 @@
   display: flex;
   align-items: flex-start;
   gap: rem(14);
-  padding-top: rem(18);
-  padding-bottom: rem(18);
+  padding-top: rem(10);
+  padding-bottom: rem(10);
   border-bottom: rem(2) dashed #a9a9a9;
 
   @include mq("md") {
     gap: rem(18);
-    padding-top: rem(20);
-    padding-bottom: rem(20);
+    padding-top: rem(12);
+    padding-bottom: rem(12);
   }
-}
-
-.p-trouble__item:last-child {
-  border-bottom: none;
 }
 
 .p-trouble__icon {
@@ -152,6 +148,7 @@
   margin-top: rem(20);
   @include mq("md") {
     max-width: rem(160);
+    margin-top: rem(40);
 
   }
 }

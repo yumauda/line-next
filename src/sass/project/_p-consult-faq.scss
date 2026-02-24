@@ -67,8 +67,8 @@
   
   @include mq("md") {
     padding-left: rem(32);
-    padding-top: rem(12);
-    padding-bottom: rem(12);
+    padding-top: rem(6);
+    padding-bottom: rem(6);
   }
 }
 
@@ -103,10 +103,9 @@
   height: rem(16);
   top: rem(16);
   @include mq(md){
-    top: rem(18);
+    top: rem(12);
     width: rem(21);
     height: rem(21);
-    
   }
 }
 

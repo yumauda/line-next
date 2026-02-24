@@ -8,6 +8,7 @@
   <title>Line next LP</title>
   <meta name="description" content="Line next LP" />
   <meta name="keywords" content="Line,next,LP" />
+  <meta name="robots" content="noindex">
   <!-- ogp -->
   <meta property="og:title" content="Line next LP" />
   <meta property="og:type" content="website" />
@@ -23,6 +24,9 @@
   <!-- JavaScript -->
   <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./js/script.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="./js/gsap.js"></script>
   <!-- Vite Entry Point -->
   <script type="module" src="/src/main.js"></script>
 </head>
@@ -32,9 +36,10 @@
     <div class="p-header__inner">
       <div class="p-header__heading" role="presentation">
         <span class="p-header__heading-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-            <path d="M11 17h2v-6h-2v6zm0-8h2V7h-2v2zm1 13C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" fill="currentColor" />
-          </svg>
+          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.30003 -6.55651e-07C14.4 -6.55651e-07 18.6 4.2 18.6 9.3C18.6 14.4375 14.4 18.6 9.30003 18.6C4.16253 18.6 3.41535e-05 14.4375 3.41535e-05 9.3C3.41535e-05 4.2 4.16253 -6.55651e-07 9.30003 -6.55651e-07ZM9.30003 4.125C8.40003 4.125 7.72503 4.8375 7.72503 5.7C7.72503 6.6 8.40003 7.275 9.30003 7.275C10.1625 7.275 10.875 6.6 10.875 5.7C10.875 4.8375 10.1625 4.125 9.30003 4.125ZM11.4 13.65V12.75C11.4 12.525 11.175 12.3 10.95 12.3H10.5V8.55C10.5 8.325 10.275 8.1 10.05 8.1H7.65003C7.38753 8.1 7.20003 8.325 7.20003 8.55V9.45C7.20003 9.7125 7.38753 9.9 7.65003 9.9H8.10003V12.3H7.65003C7.38753 12.3 7.20003 12.525 7.20003 12.75V13.65C7.20003 13.9125 7.38753 14.1 7.65003 14.1H10.95C11.175 14.1 11.4 13.9125 11.4 13.65Z" fill="white"/>
+            </svg>
+            
         </span>
         <div class="p-header__heading-inner">
           <p class="p-header__heading-text">資料請求・お問い合わせをいただき、<br class="u-mobile">ありがとうございました。</p>
@@ -54,24 +59,27 @@
         <div class="p-mv__content">
           <div class="p-mv__left">
 
-            <p class="p-mv__lead">貴社の「採用のお悩みごと」を
+            <p class="p-mv__lead js-mv-loading">貴社の「採用のお悩みごと」を
               <br>採マネnext≫で解決できるか<br class="u-mobile">お答えします
               </p>
   
-            <h1 class="p-mv__title">
-              <div class="p-mv__title-img">
-                <img src="./images/common/mv_text.png" alt="Line next" width="493" height="117">
-              </div>
-              個別相談
+            <h1 class="p-mv__title js-mv-loading">
+              <span class="p-mv__title-img">
+                <img decoding="async" loading="lazy" src="./images/common/mv_text.png" alt="Line next" width="493" height="117">
+              </span>
+              <p class="p-mv__title-text">
+
+                個別相談
+              </p>
             </h1>
-            <div class="p-mv__box">
+            <div class="p-mv__box js-mv-loading">
               <figure class="p-mv__box-img">
-                <img src="./images/common/mv_box_img.png" alt="Line next" width="848" height="156">
+                <img decoding="async" loading="lazy" src="./images/common/mv_box_img.png" alt="Line next" width="848" height="156">
               </figure>
             </div>
-            <p class="p-mv__bottom-text">採マネnext≫と<br class="u-mobile">採用のプロフェッショナルが<br>1対1で丁寧にご相談に応じます</p>
+            <p class="p-mv__bottom-text js-mv-loading">採マネnext≫と<br class="u-mobile">採用のプロフェッショナルが<br>1対1で丁寧にご相談に応じます</p>
           </div>
-          <div class="p-mv__right">
+          <div class="p-mv__right js-mv-img">
             <figure class="p-mv__img">
               <img decoding="async" loading="lazy" src="./images/common/mv_img.png" alt="" width="535" height="342">
             </figure>
@@ -90,7 +98,7 @@
         </p>
         <a class="p-mv__cta" href="#">
           <span class="p-mv__cta-icon" aria-hidden="true">
-            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none">
               <path d="M15.5001 0C24.0626 0 31.0001 6.9375 31.0001 15.5C31.0001 24.0625 24.0626 31 15.5001 31C6.9376 31 9.72748e-05 24.0625 9.72748e-05 15.5C9.72748e-05 6.9375 6.9376 0 15.5001 0ZM22.5626 14.4375L14.1251 6C13.5626 5.4375 12.5626 5.4375 12.0001 6L10.9376 7.0625C10.3751 7.625 10.3751 8.625 10.9376 9.1875L17.3126 15.5L10.9376 21.875C10.3751 22.4375 10.3751 23.4375 10.9376 24L12.0001 25.0625C12.5626 25.625 13.5626 25.625 14.1251 25.0625L22.5626 16.5625C23.1876 16 23.1876 15.0625 22.5626 14.4375Z" fill="white"/>
               </svg>
               
@@ -103,19 +111,19 @@
     <section class="p-trouble">
       <div class="l-inner">
         <header class="p-trouble__head">
-          <h2 class="p-trouble__title">
+          <h2 class="p-trouble__title js-fadeIn">
             採マネnext≫を導入すると<br>
             一体何ができるの？
           </h2>
-          <div class="p-trouble__underline" aria-hidden="true"></div>
-          <p class="p-trouble__lead">
+          <div class="p-trouble__underline js-underLine" aria-hidden="true"></div>
+          <p class="p-trouble__lead js-fadeIn">
             採マネnext≫の名前を知りつつも<br>
             導入を迷われている企業様も<br class="u-mobile">多くいらっしゃいます。
           </p>
         </header>
 
         <div class="p-trouble__body">
-          <figure class="p-trouble__figure">
+          <figure class="p-trouble__figure js-fadeIn">
             <picture>
               <source srcset="./images/common/trouble-man.webp" type="image/webp">
               <img decoding="async" loading="lazy" src="./images/common/trouble-man.png" alt="困っている男性のイラスト" width="1167" height="1167">
@@ -123,37 +131,37 @@
           </figure>
 
           <ul class="p-trouble__list">
-            <li class="p-trouble__item">
+            <li class="p-trouble__item js-fadeIn">
               <img decoding="async" loading="lazy" class="p-trouble__icon" src="./images/common/trouble-icon-01.svg" alt="" width="39" height="39">
               <p class="p-trouble__text">予定する<span>採用人数を達成</span>できていない</p>
             </li>
-            <li class="p-trouble__item">
+            <li class="p-trouble__item js-fadeIn">
               <img decoding="async" loading="lazy" class="p-trouble__icon" src="./images/common/trouble-icon-02.svg" alt="" width="39" height="39">
               <p class="p-trouble__text">学生が全然<span>集まらない</span></p>
             </li>
-            <li class="p-trouble__item">
+            <li class="p-trouble__item js-fadeIn">
               <img decoding="async" loading="lazy" class="p-trouble__icon" src="./images/common/trouble-icon-03.svg" alt="" width="39" height="39">
               <p class="p-trouble__text"><span>内定辞退</span>が多すぎる</p>
             </li>
-            <li class="p-trouble__item">
+            <li class="p-trouble__item js-fadeIn">
               <img decoding="async" loading="lazy" class="p-trouble__icon" src="./images/common/trouble-icon-04.svg" alt="" width="39" height="39">
               <p class="p-trouble__text">今の採用媒体を<span>使い続けて</span>良いのだろうか？</p>
             </li>
-            <li class="p-trouble__item">
+            <li class="p-trouble__item js-fadeIn">
               <img decoding="async" loading="lazy" class="p-trouble__icon" src="./images/common/trouble-icon-05.svg" alt="" width="39" height="39">
               <p class="p-trouble__text">面談の日程調整に<span>時間がかかりすぎ</span>ている</p>
             </li>
-            <li class="p-trouble__item">
+            <li class="p-trouble__item js-fadeIn">
               <img decoding="async" loading="lazy" class="p-trouble__icon" src="./images/common/trouble-icon-06.svg" alt="" width="39" height="39">
               <p class="p-trouble__text">せっかく面接の予約が入っても<span>ドタキャン</span>されてしまう</p>
             </li>
-            <li class="p-trouble__item">
+            <li class="p-trouble__item js-fadeIn">
               <img decoding="async" loading="lazy" class="p-trouble__icon" src="./images/common/trouble-icon-07.svg" alt="" width="39" height="39">
               <p class="p-trouble__text">LINEでメッセージを送っても<span>返事がこない</span></p>
             </li>
           </ul>
         </div>
-        <div class="p-trouble__arrow">
+        <div class="p-trouble__arrow js-fadeIn">
           <img decoding="async" loading="lazy" src="./images/common/trouble-arrow.png" alt="" width="160" height="54">
         </div>
       </div>
@@ -164,7 +172,7 @@
         <div class="p-consult__content">
 
           <div class="p-consult__inner">
-            <div class="p-consult__head-box">
+            <div class="p-consult__head-box js-fadeIn">
               <header class="p-consult__head">
                 <h2 class="p-consult__title">
                   <span class="p-consult__title-top">このような疑問や不安の解消のため</span>
@@ -182,7 +190,7 @@
               </figure>
             </div>
   
-            <div class="p-consult__body">
+            <div class="p-consult__body js-fadeIn">
               <p class="p-consult__text">
                 個別相談会では、<span class="p-consult__text--bold">採マネnext≫の機能や導入事例</span>について<br>
                 <span class="p-consult__text--bold">十分な知識を持ったプロフェッショナル</span>が1対1で丁寧にご説明させていただきます。
@@ -202,9 +210,9 @@
 
     <section class="p-consult-faq">
       <div class="l-inner">
-        <h2 class="p-consult-faq__title">よくいただくご相談内容</h2>
+        <h2 class="p-consult-faq__title js-fadeIn">よくいただくご相談内容</h2>
 
-        <div class="p-consult-faq__card">
+        <div class="p-consult-faq__card js-fadeIn">
           <picture>
             <source srcset="./images/common/consult-worry-56586a.webp" type="image/webp">
             <img decoding="async" loading="lazy" src="./images/common/consult-worry-56586a.png" alt="" width="768" height="512">
@@ -212,28 +220,28 @@
         </div>
 
         <ul class="p-consult-faq__list">
-          <li class="p-consult-faq__item">
+          <li class="p-consult-faq__item js-fadeIn">
             <p class="p-consult-faq__item-text">採マネnext≫の<span>管理画面</span>を見せてほしい</p>
           </li>
-          <li class="p-consult-faq__item">
-            <p class="p-consult-faq__item-text">採用に<span>LINE</span>を使いたいけれどもどうすれば良い？</p>
+          <li class="p-consult-faq__item js-fadeIn">
+            <p class="p-consult-faq__item-text"><span>採用にLINEを使いたい</span>けれどもどうすれば良い？</p>
           </li>
-          <li class="p-consult-faq__item">
+          <li class="p-consult-faq__item js-fadeIn">
             <p class="p-consult-faq__item-text">LINEで<span>ドタキャン</span>をなくしたい</p>
           </li>
-          <li class="p-consult-faq__item">
+          <li class="p-consult-faq__item js-fadeIn">
             <p class="p-consult-faq__item-text">LINEを使ったら<span>採用人数は増える</span>のか？</p>
           </li>
-          <li class="p-consult-faq__item">
+          <li class="p-consult-faq__item js-fadeIn">
             <p class="p-consult-faq__item-text">学生と<span>上手くコミュニケーション</span>を取るにはどうすれば良い？</p>
           </li>
-          <li class="p-consult-faq__item">
+          <li class="p-consult-faq__item js-fadeIn">
             <p class="p-consult-faq__item-text">学生情報を管理しながら<span>LINEで効率よく連絡</span>できるの？</p>
           </li>
-          <li class="p-consult-faq__item">
+          <li class="p-consult-faq__item js-fadeIn">
             <p class="p-consult-faq__item-text">そもそも今の学生って<span>LINEでの連絡</span>を望んでいるの？</p>
           </li>
-          <li class="p-consult-faq__item">
+          <li class="p-consult-faq__item js-fadeIn">
             <p class="p-consult-faq__item-text"><span>SNSや広告からの導線</span>はどうした良いのか教えてほしい</p>
           </li>
         </ul>
@@ -242,17 +250,17 @@
 
     <section class="p-consult-detail">
       <div class="l-inner">
-        <h2 class="p-consult-detail__title">
+        <h2 class="p-consult-detail__title js-fadeIn">
           個別相談会は<br class="u-mobile">採マネnext≫の理解を<br>
           より深めていただく場です
         </h2>
 
-        <div class="p-consult-detail__voices">
+        <div class="p-consult-detail__voices js-fadeIn">
           <p class="p-consult-detail__lead">そのため、ご相談された方からは</p>
           <ul class="p-consult-detail__voice-list">
             <li class="p-consult-detail__voice-item">
               <span class="p-consult-detail__check" aria-hidden="true">
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
                   <path d="M20.3438 10.1719C20.3438 15.791 15.75 20.3438 10.1719 20.3438C4.55273 20.3438 0 15.791 0 10.1719C0 4.59375 4.55273 0 10.1719 0C15.75 0 20.3438 4.59375 20.3438 10.1719ZM8.98242 15.5859L16.5293 8.03906C16.7754 7.79297 16.7754 7.3418 16.5293 7.0957L15.5859 6.19336C15.3398 5.90625 14.9297 5.90625 14.6836 6.19336L8.53125 12.3457L5.61914 9.47461C5.37305 9.1875 4.96289 9.1875 4.7168 9.47461L3.77344 10.377C3.52734 10.623 3.52734 11.0742 3.77344 11.3203L8.03906 15.5859C8.28516 15.832 8.73633 15.832 8.98242 15.5859Z" fill="#FF7600"/>
                   </svg>
                   
@@ -261,7 +269,7 @@
             </li>
             <li class="p-consult-detail__voice-item">
               <span class="p-consult-detail__check" aria-hidden="true">
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
                   <path d="M20.3438 10.1719C20.3438 15.791 15.75 20.3438 10.1719 20.3438C4.55273 20.3438 0 15.791 0 10.1719C0 4.59375 4.55273 0 10.1719 0C15.75 0 20.3438 4.59375 20.3438 10.1719ZM8.98242 15.5859L16.5293 8.03906C16.7754 7.79297 16.7754 7.3418 16.5293 7.0957L15.5859 6.19336C15.3398 5.90625 14.9297 5.90625 14.6836 6.19336L8.53125 12.3457L5.61914 9.47461C5.37305 9.1875 4.96289 9.1875 4.7168 9.47461L3.77344 10.377C3.52734 10.623 3.52734 11.0742 3.77344 11.3203L8.03906 15.5859C8.28516 15.832 8.73633 15.832 8.98242 15.5859Z" fill="#FF7600"/>
                   </svg>
                   
@@ -273,7 +281,7 @@
           <p class="p-consult-detail__lead">というお声をいただくことがあれば、</p>
           <div class="p-consult-detail__voice-note">
             <span class="p-consult-detail__check" aria-hidden="true">
-              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
                 <path d="M20.3438 10.1719C20.3438 15.791 15.75 20.3438 10.1719 20.3438C4.55273 20.3438 0 15.791 0 10.1719C0 4.59375 4.55273 0 10.1719 0C15.75 0 20.3438 4.59375 20.3438 10.1719ZM8.98242 15.5859L16.5293 8.03906C16.7754 7.79297 16.7754 7.3418 16.5293 7.0957L15.5859 6.19336C15.3398 5.90625 14.9297 5.90625 14.6836 6.19336L8.53125 12.3457L5.61914 9.47461C5.37305 9.1875 4.96289 9.1875 4.7168 9.47461L3.77344 10.377C3.52734 10.623 3.52734 11.0742 3.77344 11.3203L8.03906 15.5859C8.28516 15.832 8.73633 15.832 8.98242 15.5859Z" fill="#FF7600"/>
                 </svg>
                 
@@ -297,21 +305,21 @@
           </div>
         </div>
 
-        <figure class="p-consult-detail__point">
+        <figure class="p-consult-detail__point js-fadeIn">
           <picture>
             <source srcset="./images/common/consult-point-56586a.webp" type="image/webp">
             <img decoding="async" loading="lazy" src="./images/common/consult-point-56586a.png" alt="" width="768" height="454">
           </picture>
           
         </figure>
-        <div class="p-consult-detail__point-text">
+        <div class="p-consult-detail__point-text js-fadeIn">
           <span>些細なご質問から具体的な導入についてのご相談まで</span>
           <span>何でも構いません。</span>
           <span class="p-consult-detail__point-cta">ぜひお気軽にお申し込みください。</span>
         </div>
 
-        <h3 class="p-consult-detail__table-title">【無料個別相談詳細】</h3>
-        <table class="p-consult-detail__table">
+        <h3 class="p-consult-detail__table-title js-fadeIn">【無料個別相談詳細】</h3>
+        <table class="p-consult-detail__table js-fadeIn">
           <caption class="p-consult-detail__caption">無料個別相談の詳細</caption>
           <tbody>
             <tr>
@@ -357,7 +365,7 @@
         </p>
         <a class="p-mv__cta" href="#">
           <span class="p-mv__cta-icon" aria-hidden="true">
-            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none">
               <path d="M15.5001 0C24.0626 0 31.0001 6.9375 31.0001 15.5C31.0001 24.0625 24.0626 31 15.5001 31C6.9376 31 9.72748e-05 24.0625 9.72748e-05 15.5C9.72748e-05 6.9375 6.9376 0 15.5001 0ZM22.5626 14.4375L14.1251 6C13.5626 5.4375 12.5626 5.4375 12.0001 6L10.9376 7.0625C10.3751 7.625 10.3751 8.625 10.9376 9.1875L17.3126 15.5L10.9376 21.875C10.3751 22.4375 10.3751 23.4375 10.9376 24L12.0001 25.0625C12.5626 25.625 13.5626 25.625 14.1251 25.0625L22.5626 16.5625C23.1876 16 23.1876 15.0625 22.5626 14.4375Z" fill="white"/>
               </svg>
               
@@ -369,15 +377,15 @@
 
     <section class="p-flow">
       <div class="l-inner">
-        <h2 class="p-flow__title">ご予約の流れ</h2>
+        <h2 class="p-flow__title js-fadeIn">ご予約の流れ</h2>
         <span class="p-flow__separator" aria-hidden="true"></span>
-        <p class="p-flow__lead">
+        <p class="p-flow__lead js-fadeIn">
           ボタンを押すと<br class="u-mobile">下記の予約フォームが表示されます。<br>
           以下の流れでお申し込みください。
         </p>
 
         <ol class="p-flow__list">
-          <li class="p-flow__item">
+          <li class="p-flow__item js-fadeIn">
             <div class="p-flow__item-head">
               <span class="p-flow__badge" aria-hidden="true">1</span>
               <p class="p-flow__item-title">ご希望の時間帯を選択ください</p>
@@ -391,7 +399,7 @@
             </figure>
           </li>
 
-          <li class="p-flow__item">
+          <li class="p-flow__item js-fadeIn">
             <div class="p-flow__item-head">
               <span class="p-flow__badge" aria-hidden="true">2</span>
               <p class="p-flow__item-title">
@@ -411,7 +419,7 @@
             </figure>
           </li>
 
-          <li class="p-flow__item">
+          <li class="p-flow__item js-fadeIn">
             <div class="p-flow__item-head">
               <span class="p-flow__badge" aria-hidden="true">3</span>
               <p class="p-flow__item-title">
@@ -447,7 +455,7 @@
           </p>
           <a class="p-mv__cta" href="#">
             <span class="p-mv__cta-icon" aria-hidden="true">
-              <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="31" height="31" viewBox="0 0 31 31" fill="none">
                 <path d="M15.5001 0C24.0626 0 31.0001 6.9375 31.0001 15.5C31.0001 24.0625 24.0626 31 15.5001 31C6.9376 31 9.72748e-05 24.0625 9.72748e-05 15.5C9.72748e-05 6.9375 6.9376 0 15.5001 0ZM22.5626 14.4375L14.1251 6C13.5626 5.4375 12.5626 5.4375 12.0001 6L10.9376 7.0625C10.3751 7.625 10.3751 8.625 10.9376 9.1875L17.3126 15.5L10.9376 21.875C10.3751 22.4375 10.3751 23.4375 10.9376 24L12.0001 25.0625C12.5626 25.625 13.5626 25.625 14.1251 25.0625L22.5626 16.5625C23.1876 16 23.1876 15.0625 22.5626 14.4375Z" fill="white"/>
                 </svg>
                 
